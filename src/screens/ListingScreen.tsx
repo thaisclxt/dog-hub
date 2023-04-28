@@ -18,12 +18,16 @@ const ListingScreen = () => {
 
 		fetchData();
 	}, []);
+
 	return (
 		<>
-			Tela de Listagem
+			<h1>Para Adoção</h1>
 			<div>
 				{breeds.map((breed) => (
-					<p key={breed.id}>{breed.name}</p>
+					<div key={breed.id}>
+						<img src={`assets/${breed.id}.jpg`} alt="Fetched image" />
+						<p>{breed.name}</p>
+					</div>
 				))}
 			</div>
 		</>
