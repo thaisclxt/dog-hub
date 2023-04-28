@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Badge, Card, Group, Image, Title } from "@mantine/core";
 import axios from "axios";
 
 interface Breed {
@@ -21,18 +22,38 @@ const ListingScreen = () => {
 
 	return (
 		<>
-			<h1>Para Adoção</h1>
-			<div>
+			<Title order={1} color="gray.7" align="center">
+				Para Adoção
+			</Title>
+
+			<div style={{ width: 480, margin: "auto" }}>
 				{breeds.map((breed) => (
-					<div key={breed.id}>
-						<img src={`assets/${breed.id}.jpg`} alt="Fetched image" />
+					<Card shadow="md" padding="lg" radius="md" my={34}>
+						<Card.Section>
+							<Image
+								src={`assets/${breed.id}.jpg`}
+								alt={`${breed.name} image`}
+							/>
+						</Card.Section>
 
-						<h2>{breed.name}</h2>
+						<Title order={2} align="left" color="gray.6" my="sm">
+							{breed.name}
+						</Title>
 
-						{breed.temperament.split(", ").map((temperament: string) => (
-							<p key={temperament}>{temperament}</p>
-						))}
-					</div>
+						<Group position="center" spacing="sm">
+							{breed.temperament.split(", ").map((temperament: string) => (
+								<Badge
+									key={temperament}
+									color="gray.6"
+									size="lg"
+									radius="sm"
+									variant="outline"
+								>
+									{temperament}
+								</Badge>
+							))}
+						</Group>
+					</Card>
 				))}
 			</div>
 		</>
