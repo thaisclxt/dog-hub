@@ -1,45 +1,18 @@
-import { AppShell, Group, Header, Space, Text } from "@mantine/core";
-import { Storefront } from "@mui/icons-material";
+import { AppShell, Header } from "@mantine/core";
 
 import Router from "./router";
+import HeaderContent from "./components/HeaderContent";
 
 const App = () => {
 	return (
 		<AppShell
+			pt={"lg"}
 			styles={(theme) => ({
-				main: {
-					backgroundColor:
-						theme.colorScheme === "dark"
-							? theme.colors.dark[8]
-							: theme.colors.gray[2],
-				},
+				main: { backgroundColor: theme.colors.gray[2], margin: "-1rem" },
 			})}
 			header={
 				<Header height={80} style={{ backgroundColor: "#868e96" }}>
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							justifyContent: "space-between",
-							height: "100%",
-						}}
-					>
-						<Space style={{ marginLeft: "2.5rem" }} />
-
-						<Group spacing="-xs">
-							<Text color="white" size={25}>
-								DOG
-							</Text>
-							<Text color="white" size={25} fw={700}>
-								HUB
-							</Text>
-						</Group>
-
-						<Storefront
-							fontSize="large"
-							style={{ color: "white", position: "relative", right: "4rem" }}
-						/>
-					</div>
+					<HeaderContent />
 				</Header>
 			}
 		>
