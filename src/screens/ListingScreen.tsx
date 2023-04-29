@@ -1,22 +1,17 @@
+import ScreenTitle from "../components/ScreenTitle";
 import { useEffect, useState } from "react";
 import { Badge, Card, Group, Image, Title } from "@mantine/core";
 import { Link } from "react-router-dom";
-import ScreenTitle from "../components/ScreenTitle";
+import { Breeds } from "../interfaces";
 
 import axios from "axios";
 
-interface Breed {
-	id: number;
-	name: string;
-	temperament: string;
-}
-
 const ListingScreen = () => {
-	const [breeds, setBreeds] = useState<Breed[]>([]);
+	const [breeds, setBreeds] = useState<Breeds[]>([]);
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const response = await axios.get<Breed[]>("breeds.json");
+			const response = await axios.get<Breeds[]>("breeds.json");
 			setBreeds(response.data);
 		};
 
