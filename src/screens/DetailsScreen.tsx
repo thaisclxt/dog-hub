@@ -1,7 +1,8 @@
 import ScreenTitle from "../components/ScreenTitle";
+
+import { Breed } from "../interfaces";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Breed } from "../interfaces";
 
 import axios from "axios";
 
