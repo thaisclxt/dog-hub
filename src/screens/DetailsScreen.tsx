@@ -5,6 +5,14 @@ import { Breed } from "../interfaces";
 
 import axios from "axios";
 
+const parseMeasurements = (
+	value: string | number | { imperial: string; metric: string },
+	isImperial = false
+): string => {
+	if (typeof value !== "object") return value.toString();
+	return isImperial ? value.imperial : value.metric;
+};
+
 const DetailsScreen = () => {
 	const { id } = useParams();
 	const [breed, setBreed] = useState<Breed>();
@@ -21,8 +29,16 @@ const DetailsScreen = () => {
 	return (
 		<>
 			<ScreenTitle title="Detalhes" />
-			{id}
-			{breed?.name}
+
+			{breed && (
+				<ul>
+					{Object.entries(breed).map(([key, value]) => (
+						<li key={key}>
+							<span>{parseMeasurements(value)}</span>
+						</li>
+					))}
+				</ul>
+			)}
 		</>
 	);
 };
