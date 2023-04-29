@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Badge, Card, Group, Image, Title } from "@mantine/core";
+import { Link } from "react-router-dom";
+
 import axios from "axios";
 
 interface Breed {
@@ -28,7 +30,15 @@ const ListingScreen = () => {
 
 			<div style={{ width: 480, margin: "auto" }}>
 				{breeds.map((breed) => (
-					<Card shadow="md" padding="lg" radius="md" my={34}>
+					<Card
+						shadow="md"
+						padding="lg"
+						radius="md"
+						my={34}
+						key={breed.id}
+						component={Link}
+						to={`details/${breed.id}`}
+					>
 						<Card.Section>
 							<Image
 								src={`assets/${breed.id}.jpg`}

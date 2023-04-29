@@ -1,5 +1,9 @@
+import { useParams } from "react-router-dom";
+
 const DetailsScreen = () => {
-	return <>Tela de Detalhes</>;
+	const { id } = useParams();
+
+	return <>Detalhes de {id}</>;
 };
 
 export default DetailsScreen;
