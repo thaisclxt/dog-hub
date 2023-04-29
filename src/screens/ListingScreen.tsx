@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Badge, Card, Group, Image, Title } from "@mantine/core";
 import { Link } from "react-router-dom";
+import ScreenTitle from "../components/ScreenTitle";
 
 import axios from "axios";
 
@@ -24,9 +25,7 @@ const ListingScreen = () => {
 
 	return (
 		<>
-			<Title order={1} color="gray.7" align="center">
-				Para Adoção
-			</Title>
+			<ScreenTitle title="Para Adoção" />
 
 			<div style={{ width: 480, margin: "auto" }}>
 				{breeds.map((breed) => (

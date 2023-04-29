@@ -1,5 +1,11 @@
+import ScreenTitle from "../components/ScreenTitle";
+
 const AdoptionScreen = () => {
-	return <>Tela de Adoção</>;
+	return (
+		<>
+			<ScreenTitle title="Tela de Adoção" />
+		</>
+	);
 };
 
 export default AdoptionScreen;

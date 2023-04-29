@@ -1,9 +1,14 @@
 import { useParams } from "react-router-dom";
+import ScreenTitle from "../components/ScreenTitle";
 
 const DetailsScreen = () => {
 	const { id } = useParams();
 
-	return <>Detalhes de {id}</>;
+	return (
+		<>
+			<ScreenTitle title="Detalhes" />;
+		</>
+	);
 };
 
 export default DetailsScreen;
