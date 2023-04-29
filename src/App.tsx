@@ -1,4 +1,6 @@
-import { AppShell, Header, Text } from "@mantine/core";
+import { AppShell, Group, Header, Space, Text } from "@mantine/core";
+import { Storefront } from "@mui/icons-material";
+
 import Router from "./router";
 
 const App = () => {
@@ -17,17 +19,26 @@ const App = () => {
 					<div
 						style={{
 							display: "flex",
-							justifyContent: "center",
 							alignItems: "center",
+							justifyContent: "space-between",
 							height: "100%",
 						}}
 					>
-						<Text color="white" size={25}>
-							DOG
-						</Text>
-						<Text color="white" size={25} fw={700}>
-							HUB
-						</Text>
+						<Space style={{ marginLeft: "2.5rem" }} />
+
+						<Group spacing="-xs">
+							<Text color="white" size={25}>
+								DOG
+							</Text>
+							<Text color="white" size={25} fw={700}>
+								HUB
+							</Text>
+						</Group>
+
+						<Storefront
+							fontSize="large"
+							style={{ color: "white", position: "relative", right: "4rem" }}
+						/>
 					</div>
 				</Header>
 			}
