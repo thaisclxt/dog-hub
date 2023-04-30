@@ -1,5 +1,5 @@
 import { Breed, Breeds } from "../interfaces";
-import { Badge, Card, Group, Image, Title } from "@mantine/core";
+import { Badge, Button, Card, Group, Image, Title } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 const parseMeasurements = (
@@ -16,7 +16,7 @@ const AdoptionCard = (props: {
 }) => {
 	const srcImage = () => {
 		const path = props.requireDetails ? ".." : "";
-		return path + `details/${props.breed.id}`;
+		return path + `/assets/${props.breed.id}.jpg`;
 	};
 
 	return (
@@ -26,13 +26,10 @@ const AdoptionCard = (props: {
 			radius="md"
 			my={34}
 			component={Link}
-			to={srcImage()}
+			to={`details/${props.breed.id}`}
 		>
 			<Card.Section>
-				<Image
-					src={`../assets/${props.breed.id}.jpg`}
-					alt={`${props.breed.name} image`}
-				/>
+				<Image src={srcImage()} alt={`${props.breed.name} image`} />
 			</Card.Section>
 
 			<Title order={2} align="left" color="gray.6" my="sm">
@@ -54,13 +51,25 @@ const AdoptionCard = (props: {
 			</Group>
 
 			{props.requireDetails && (
-				<ul>
-					{Object.entries(props.breed).map(([key, value]) => (
-						<li key={key}>
-							<span>{parseMeasurements(value)}</span>
-						</li>
-					))}
-				</ul>
+				<>
+					<ul>
+						{Object.entries(props.breed).map(([key, value]) => (
+							<li key={key}>
+								<span>{parseMeasurements(value)}</span>
+							</li>
+						))}
+					</ul>
+
+					<Button
+						color="gray.6"
+						uppercase
+						fullWidth
+						component={Link}
+						to={"../../adoption"}
+					>
+						Adotar
+					</Button>
+				</>
 			)}
 		</Card>
 	);
