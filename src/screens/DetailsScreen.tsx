@@ -5,14 +5,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import axios from "axios";
-
-const parseMeasurements = (
-	value: string | number | { imperial: string; metric: string },
-	isImperial = false
-): string => {
-	if (typeof value !== "object") return value.toString();
-	return isImperial ? value.imperial : value.metric;
-};
+import AdoptionCard from "../components/AdoptionCard";
 
 const DetailsScreen = () => {
 	const { id } = useParams();
@@ -32,13 +25,9 @@ const DetailsScreen = () => {
 			<ScreenTitle title="Detalhes" />
 
 			{breed && (
-				<ul>
-					{Object.entries(breed).map(([key, value]) => (
-						<li key={key}>
-							<span>{parseMeasurements(value)}</span>
-						</li>
-					))}
-				</ul>
+				<div style={{ width: 480, margin: "auto" }}>
+					<AdoptionCard breed={breed} key={breed.id} requireDetails />
+				</div>
 			)}
 		</>
 	);
