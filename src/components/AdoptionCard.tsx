@@ -19,15 +19,12 @@ const AdoptionCard = (props: {
 		return path + `/assets/${props.breed.id}.jpg`;
 	};
 
+	const detailsProps = props.requireDetails
+		? { to: "" }
+		: { component: Link, to: `details/${props.breed.id}` };
+
 	return (
-		<Card
-			shadow="md"
-			padding="lg"
-			radius="md"
-			my={34}
-			component={Link}
-			to={`details/${props.breed.id}`}
-		>
+		<Card shadow="md" padding="lg" radius="md" my={34} {...detailsProps}>
 			<Card.Section>
 				<Image src={srcImage()} alt={`${props.breed.name} image`} />
 			</Card.Section>
@@ -74,4 +71,5 @@ const AdoptionCard = (props: {
 		</Card>
 	);
 };
+
 export default AdoptionCard;
