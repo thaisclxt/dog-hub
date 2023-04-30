@@ -1,9 +1,12 @@
 import { AppShell, Header } from "@mantine/core";
 
+import { Breed } from "./interfaces";
 import Router from "./router";
 import HeaderContent from "./components/HeaderContent";
 
 const App = () => {
+	const cart: Breed[] = [];
+
 	return (
 		<AppShell
 			pt={"lg"}
@@ -12,11 +15,11 @@ const App = () => {
 			})}
 			header={
 				<Header height={80} style={{ backgroundColor: "#868e96" }}>
-					<HeaderContent />
+					<HeaderContent cart={cart} />
 				</Header>
 			}
 		>
-			<Router />
+			<Router cart={cart} />
 		</AppShell>
 	);
 };

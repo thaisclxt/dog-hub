@@ -23,6 +23,8 @@ const AdoptionCard = (props: {
 		? { to: "" }
 		: { component: Link, to: `details/${props.breed.id}` };
 
+	const handleChange = () => {};
+
 	return (
 		<Card shadow="md" padding="lg" radius="md" my={34} {...detailsProps}>
 			<Card.Section>
@@ -67,6 +69,7 @@ const AdoptionCard = (props: {
 						fullWidth
 						component={Link}
 						to={"../../adoption"}
+						onClick={() => handleChange()}
 					>
 						Adotar
 					</Button>

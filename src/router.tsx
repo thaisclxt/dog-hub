@@ -3,8 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ListingScreen from "./screens/ListingScreen";
 import AdoptionScreen from "./screens/AdoptionScreen";
 import DetailsScreen from "./screens/DetailsScreen";
+import { Breed } from "./interfaces";
 
-const Router = () => (
+const Router = (props: { cart: Breed[] }) => (
 	<BrowserRouter>
 		<Routes>
 			<Route path="/" element={<ListingScreen />} />
