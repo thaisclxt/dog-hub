@@ -1,4 +1,4 @@
-import { Group, Indicator, Space, Text } from "@mantine/core";
+import { Badge, Group, Space, Text } from "@mantine/core";
 import { Storefront } from "@mui/icons-material";
 import { Breed } from "../interfaces";
 
@@ -25,15 +25,20 @@ const HeaderContent = (props: { cart: Breed[] }) => {
 				</Text>
 			</Group>
 
-			<Indicator
-				inline
-				color="red.8"
-				size={"1rem"}
-				label={cart.length}
-				style={{ position: "relative", right: "4rem" }}
-			>
-				<Storefront fontSize="large" style={{ color: "white" }} />
-			</Indicator>
+			<Group>
+				<Storefront
+					fontSize="large"
+					style={{ color: "white", position: "relative", right: "2.3rem" }}
+				/>
+				<Badge
+					color="red.8"
+					size={"0.5rem"}
+					variant="filled"
+					style={{ position: "relative", right: "4rem", top: "-0.9rem"}}
+				>
+					{cart.length}
+				</Badge>
+			</Group>
 		</div>
 	);
 };
