@@ -4,14 +4,17 @@ import { Breed } from "../interfaces";
 
 const AdoptionScreen = (props: {
 	cart: Breed[];
-	setCart: React.Dispatch<React.SetStateAction<Breed[]>>;
+	setCart: React.Dispatch<any | ((prevState: any) => any)>;
 }) => {
-	const { cart } = props;
+	const { cart, setCart } = props;
 
 	return (
 		<>
 			<ScreenTitle title="Sua lista de adoção" />
-			<CompactCard />
+
+			{cart.map((dog, index) => (
+				<CompactCard breed={dog} index={index} setCart={setCart} />
+			))}
 		</>
 	);
 };
