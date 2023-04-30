@@ -1,5 +1,5 @@
 import { Breed, Breeds } from "../interfaces";
-import { Badge, Button, Card, Group, Image, Title } from "@mantine/core";
+import { Badge, Button, Card, Group, Image, List, Title } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 const parseMeasurements = (
@@ -49,13 +49,17 @@ const AdoptionCard = (props: {
 
 			{props.requireDetails && (
 				<>
-					<ul>
-						{Object.entries(props.breed).map(([key, value]) => (
-							<li key={key}>
-								<span>{parseMeasurements(value)}</span>
-							</li>
-						))}
-					</ul>
+					<List my={34}>
+						{Object.entries(props.breed).map(
+							([key, value]) =>
+								key !== "name" &&
+								key !== "id" &&
+								key !== "temperament" &&
+								value !== "" && (
+									<List.Item key={key}>{parseMeasurements(value)}</List.Item>
+								)
+						)}
+					</List>
 
 					<Button
 						color="gray.6"
