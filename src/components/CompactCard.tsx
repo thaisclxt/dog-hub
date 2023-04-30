@@ -2,7 +2,7 @@ import { Box, Center, Flex, Group, Image, Text } from "@mantine/core";
 import { Close } from "@mui/icons-material";
 import { Breed } from "../interfaces";
 
-const removeAt = (index: number, array: any[]): any[] =>
+const removeAt = <T,>(index: number, array: T[]): T[] =>
 	array.slice(0, index).concat(array.slice(index + 1));
 
 const CompactCard = (props: {
@@ -37,7 +37,11 @@ const CompactCard = (props: {
 
 					<Close
 						fontSize="medium"
-						style={{ color: "gray", alignContent: "flex-end" }}
+						style={{
+							color: "gray",
+							alignContent: "flex-end",
+							cursor: "pointer",
+						}}
 						onClick={() => setCart((prev: Breed[]) => removeAt(index, prev))}
 					/>
 				</Flex>
