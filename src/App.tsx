@@ -1,11 +1,12 @@
 import { AppShell, Header } from "@mantine/core";
-
+import { useState } from "react";
 import { Breed } from "./interfaces";
+
 import Router from "./router";
 import HeaderContent from "./components/HeaderContent";
 
 const App = () => {
-	const cart: Breed[] = [];
+	const [cart, setCart] = useState<Breed[]>([]);
 
 	return (
 		<AppShell
@@ -19,7 +20,7 @@ const App = () => {
 				</Header>
 			}
 		>
-			<Router cart={cart} />
+			<Router cart={cart} setCart={setCart} />
 		</AppShell>
 	);
 };

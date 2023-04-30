@@ -12,31 +12,32 @@ const parseMeasurements = (
 
 const AdoptionCard = (props: {
 	breed: Breeds | Breed;
+	onAdd: () => void;
 	requireDetails?: boolean;
 }) => {
+	const { breed, onAdd, requireDetails } = props;
+
 	const srcImage = () => {
-		const path = props.requireDetails ? ".." : "";
-		return path + `/assets/${props.breed.id}.jpg`;
+		const path = requireDetails ? ".." : "";
+		return path + `/assets/${breed.id}.jpg`;
 	};
 
-	const detailsProps = props.requireDetails
+	const detailsProps = requireDetails
 		? { to: "" }
-		: { component: Link, to: `details/${props.breed.id}` };
-
-	const handleChange = () => {};
+		: { component: Link, to: `details/${breed.id}` };
 
 	return (
 		<Card shadow="md" padding="lg" radius="md" my={34} {...detailsProps}>
 			<Card.Section>
-				<Image src={srcImage()} alt={`${props.breed.name} image`} />
+				<Image src={srcImage()} alt={`${breed.name} image`} />
 			</Card.Section>
 
 			<Title order={2} align="left" color="gray.6" my="sm">
-				{props.breed.name}
+				{breed.name}
 			</Title>
 
 			<Group position="center" spacing="sm">
-				{props.breed.temperament.split(", ").map((temperament: string) => (
+				{breed.temperament.split(", ").map((temperament: string) => (
 					<Badge
 						key={temperament}
 						color="gray.6"
@@ -49,10 +50,10 @@ const AdoptionCard = (props: {
 				))}
 			</Group>
 
-			{props.requireDetails && (
+			{requireDetails && (
 				<>
 					<List my={34}>
-						{Object.entries(props.breed).map(
+						{Object.entries(breed).map(
 							([key, value]) =>
 								key !== "name" &&
 								key !== "id" &&
@@ -69,7 +70,7 @@ const AdoptionCard = (props: {
 						fullWidth
 						component={Link}
 						to={"../../adoption"}
-						onClick={() => handleChange()}
+						onClick={onAdd}
 					>
 						Adotar
 					</Button>
