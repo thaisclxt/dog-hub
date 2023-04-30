@@ -1,5 +1,5 @@
 import { Badge, Group, Space, Text } from "@mantine/core";
-import { Storefront } from "@mui/icons-material";
+import { ArrowBack, Storefront } from "@mui/icons-material";
 import { Breed } from "../interfaces";
 
 const HeaderContent = (props: { cart: Breed[] }) => {
@@ -14,7 +14,15 @@ const HeaderContent = (props: { cart: Breed[] }) => {
 				height: "100%",
 			}}
 		>
-			<Space style={{ marginLeft: "2.5rem" }} />
+			{location.pathname === "/" ? (
+				<Space style={{ marginLeft: "2.5rem" }} />
+			) : (
+				<ArrowBack
+					fontSize="large"
+					style={{ color: "white", marginLeft: "3rem" }}
+					onClick={() => history.back()}
+				/>
+			)}
 
 			<Group spacing="-xs">
 				<Text color="white" size={25}>
@@ -34,7 +42,7 @@ const HeaderContent = (props: { cart: Breed[] }) => {
 					color="red.8"
 					size={"0.5rem"}
 					variant="filled"
-					style={{ position: "relative", right: "4rem", top: "-0.9rem"}}
+					style={{ position: "relative", right: "4rem", top: "-0.9rem" }}
 				>
 					{cart.length}
 				</Badge>
