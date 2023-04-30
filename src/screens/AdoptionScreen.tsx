@@ -1,9 +1,11 @@
+import CompactCard from "../components/CompactCard";
 import ScreenTitle from "../components/ScreenTitle";
 
 const AdoptionScreen = () => {
 	return (
 		<>
-			<ScreenTitle title="Tela de Adoção" />
+			<ScreenTitle title="Sua lista de adoção" />
+			<CompactCard />
 		</>
 	);
 };
