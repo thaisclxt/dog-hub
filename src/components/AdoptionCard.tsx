@@ -27,12 +27,12 @@ const AdoptionCard = (props: {
 		: { component: Link, to: `details/${breed.id}` };
 
 	return (
-		<Card shadow="md" padding="lg" radius="md" my={34} {...detailsProps}>
+		<Card shadow="md" padding="lg" radius="md" {...detailsProps}>
 			<Card.Section>
 				<Image src={srcImage()} alt={`${breed.name} image`} />
 			</Card.Section>
 
-			<Title order={2} align="left" color="gray.6" my="sm">
+			<Title order={2} align="left" color="#585858" my="sm">
 				{breed.name}
 			</Title>
 
@@ -64,7 +64,12 @@ const AdoptionCard = (props: {
 						)}
 					</List>
 
-					<Button color="gray.6" uppercase fullWidth onClick={onAdd}>
+					<Button
+						uppercase
+						fullWidth
+						onClick={onAdd}
+						style={{ background: "#6c6c6c" }}
+					>
 						Adotar
 					</Button>
 				</>

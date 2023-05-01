@@ -11,7 +11,7 @@ const AdoptionScreen = (props: {
 	const { cart, setCart } = props;
 
 	return (
-		<Stack align="center" spacing={34} h={300}>
+		<Stack align="center" spacing={34}>
 			<ScreenTitle title="Sua lista de adoção" />
 
 			{cart.map((dog, index) => (

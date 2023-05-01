@@ -1,9 +1,7 @@
 import { Title } from "@mantine/core";
 
 const ScreenTitle = (props: { title: string }) => (
-	<Title order={1} color="gray.7" align="center">
-		{props.title}
-	</Title>
+	<Title color="#585858">{props.title}</Title>
 );
 
 export default ScreenTitle;

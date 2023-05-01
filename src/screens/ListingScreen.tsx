@@ -1,4 +1,5 @@
 import { Breeds } from "../interfaces";
+import { Stack } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 import ScreenTitle from "../components/ScreenTitle";
@@ -19,15 +20,15 @@ const ListingScreen = () => {
 	}, []);
 
 	return (
-		<>
-			<ScreenTitle title="Para Adoção" />
+		<Stack align="center" spacing={34}>
+			<ScreenTitle title="Para adoção" />
 
-			<div style={{ width: 480, margin: "auto" }}>
-				{breeds.map((breed) => (
+			{breeds.map((breed) => (
+				<div style={{ width: 480, margin: "auto" }}>
 					<AdoptionCard breed={breed} key={breed.id} />
-				))}
-			</div>
-		</>
+				</div>
+			))}
+		</Stack>
 	);
 };
 

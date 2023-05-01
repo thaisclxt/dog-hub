@@ -1,4 +1,5 @@
 import { Breed } from "../interfaces";
+import { Stack } from "@mantine/core";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -23,7 +24,7 @@ const DetailsScreen = (props: {
 	}, []);
 
 	return (
-		<>
+		<Stack align="center" spacing={34}>
 			<ScreenTitle title="Detalhes" />
 
 			{breed && (
@@ -36,7 +37,7 @@ const DetailsScreen = (props: {
 					/>
 				</div>
 			)}
-		</>
+		</Stack>
 	);
 };
 
