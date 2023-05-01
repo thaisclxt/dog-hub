@@ -28,7 +28,11 @@ const HeaderContent = (props: { cart: Breed[] }) => {
 				/>
 			)}
 
-			<Group spacing="-xs">
+			<Group
+				spacing="-xs"
+				onClick={() => navigate("/")}
+				style={{ cursor: "pointer" }}
+			>
 				<Text color="white" size={25}>
 					DOG
 				</Text>
