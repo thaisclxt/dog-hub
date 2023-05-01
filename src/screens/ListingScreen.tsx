@@ -23,7 +23,7 @@ const ListingScreen = () => {
 		<Stack align="center" spacing={34}>
 			<ScreenTitle title="Para adoção" />
 			{breeds.map((breed) => (
-				<div key={breed.id} style={{ width: 480 }}>
+				<div key={breed.id} style={{ width: 380 }}>
 					<AdoptionCard breed={breed} />
 				</div>
 			))}

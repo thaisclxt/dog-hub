@@ -19,7 +19,7 @@ const CompactCard = (props: {
 				padding: theme.spacing.xs,
 				borderRadius: theme.radius.md,
 				boxShadow: theme.shadows.md,
-				width: "480px",
+				width: "380px",
 			})}
 		>
 			<Flex justify={"space-between"}>
