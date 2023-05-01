@@ -57,14 +57,23 @@ const AdoptionCard = (props: {
 
 			{requireDetails && (
 				<>
-					<List my={34}>
+					<List my={34} icon="-">
 						{Object.entries(breed).map(
 							([key, value]) =>
 								key !== "name" &&
 								key !== "id" &&
 								key !== "temperament" &&
 								value !== "" && (
-									<List.Item key={key}>{parseMeasurements(value)}</List.Item>
+									<List.Item
+										key={key}
+										fw={700}
+										sx={(theme) => ({
+											color: theme.colors.gray[6],
+											fontSize: theme.fontSizes.xs,
+										})}
+									>
+										{parseMeasurements(value)}
+									</List.Item>
 								)
 						)}
 					</List>

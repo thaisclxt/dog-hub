@@ -1,4 +1,4 @@
-import { Badge, Flex, Group, Space, Text, Title } from "@mantine/core";
+import { Badge, Flex, Group, Space, Title } from "@mantine/core";
 import { ArrowBack, Storefront } from "@mui/icons-material";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Breed } from "../interfaces";

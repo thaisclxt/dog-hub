@@ -11,6 +11,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 			theme={{
 				fontFamily: "sans-serif",
 
+				fontSizes: {
+					xs: "0.9rem",
+				},
+
 				shadows: {
 					md: "1px 1px 3px rgba(0, 0, 0, .35)",
 					lg: "0px 3px 15px rgba(0, 0, 0, .65)",
