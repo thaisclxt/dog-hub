@@ -40,10 +40,15 @@ const AdoptionCard = (props: {
 				{breed.temperament.split(", ").map((temperament: string) => (
 					<Badge
 						key={temperament}
-						color="gray.6"
+						fw={100}
 						size="lg"
 						radius="sm"
 						variant="outline"
+						style={{
+							color: "#585858",
+							border: "0.0625rem solid #585858",
+							textTransform: "none",
+						}}
 					>
 						{temperament}
 					</Badge>
