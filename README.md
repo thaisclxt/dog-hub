@@ -23,9 +23,9 @@ A React App challenge for search and adopt dogs
 
 Considering dimensions (480px x 1000px)
 
-### Listining Screen (Home)
+### Listing Screen (Home)
 
-![Listining Screen](/screenshots/Captura%20de%20tela%202023-05-01%20-%2016.34.07.png)
+![Listing Screen](/screenshots/Captura%20de%20tela%202023-05-01%20-%2016.34.07.png)
 
 ### Details Screen
 
@@ -33,4 +33,4 @@ Considering dimensions (480px x 1000px)
 
 ### Adoption Screen
 
-![Listining Screen](/screenshots/Captura%20de%20tela%202023-05-01%20-%2016.34.59.png)
+![Adoption Screen](/screenshots/Captura%20de%20tela%202023-05-01%20-%2016.34.59.png)
