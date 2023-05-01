@@ -83,7 +83,7 @@ const AdoptionCard = (props: {
 						fullWidth
 						onClick={onAdd}
 						style={{ background: "#6c6c6c" }}
-						sx={(theme) => ({ "box-shadow": theme.shadows.xl })}
+						sx={(theme) => ({ boxShadow: theme.shadows.xl })}
 					>
 						Adotar
 					</Button>
