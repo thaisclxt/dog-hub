@@ -12,7 +12,7 @@ const parseMeasurements = (
 
 const AdoptionCard = (props: {
 	breed: Breeds | Breed;
-	onAdd: () => void;
+	onAdd?: () => void;
 	requireDetails?: boolean;
 }) => {
 	const { breed, onAdd, requireDetails } = props;

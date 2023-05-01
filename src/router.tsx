@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Breed } from "./interfaces";
 
 import ListingScreen from "./screens/ListingScreen";
@@ -12,19 +12,17 @@ const Router = (props: {
 	const { cart, setCart } = props;
 
 	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<ListingScreen />} />
-				<Route
-					path="/details/:id"
-					element={<DetailsScreen setCart={setCart} />}
-				/>
-				<Route
-					path="/adoption"
-					element={<AdoptionScreen cart={cart} setCart={setCart} />}
-				/>
-			</Routes>
-		</BrowserRouter>
+		<Routes>
+			<Route path="/" element={<ListingScreen />} />
+			<Route
+				path="/details/:id"
+				element={<DetailsScreen setCart={setCart} />}
+			/>
+			<Route
+				path="/adoption"
+				element={<AdoptionScreen cart={cart} setCart={setCart} />}
+			/>
+		</Routes>
 	);
 };
 

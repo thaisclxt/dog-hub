@@ -1,9 +1,13 @@
 import { Badge, Group, Space, Text } from "@mantine/core";
 import { ArrowBack, Storefront } from "@mui/icons-material";
 import { Breed } from "../interfaces";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const HeaderContent = (props: { cart: Breed[] }) => {
 	const { cart } = props;
+
+	const location = useLocation();
+	const navigate = useNavigate();
 
 	return (
 		<div
@@ -19,8 +23,8 @@ const HeaderContent = (props: { cart: Breed[] }) => {
 			) : (
 				<ArrowBack
 					fontSize="large"
-					style={{ color: "white", marginLeft: "3rem" }}
-					onClick={() => history.back()}
+					style={{ color: "white", marginLeft: "3rem", cursor: "pointer" }}
+					onClick={() => navigate(-1)}
 				/>
 			)}
 
