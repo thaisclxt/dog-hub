@@ -1,4 +1,4 @@
-import { Box, Flex, Group, Image, Text } from "@mantine/core";
+import { Box, Flex, Group, Image, Title } from "@mantine/core";
 import { Close } from "@mui/icons-material";
 import { Breed } from "../interfaces";
 
@@ -30,7 +30,7 @@ const CompactCard = (props: {
 						height={80}
 						width={100}
 					/>
-					<Text color="gray.7">{breed.name}</Text>
+					<Title order={4}>{breed.name}</Title>
 				</Group>
 
 				<Close

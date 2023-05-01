@@ -1,4 +1,4 @@
-import { Badge, Flex, Group, Space, Text } from "@mantine/core";
+import { Badge, Flex, Group, Space, Text, Title } from "@mantine/core";
 import { ArrowBack, Storefront } from "@mui/icons-material";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Breed } from "../interfaces";
@@ -34,12 +34,10 @@ const HeaderContent = (props: { cart: Breed[] }) => {
 				onClick={() => navigate("/")}
 				style={{ cursor: "pointer" }}
 			>
-				<Text color="white" size="1.6rem" fw={0}>
-					DOG
-				</Text>
-				<Text color="white" size="1.6rem" fw={900}>
+				<Title order={1}>DOG</Title>
+				<Title order={1} fw={900}>
 					HUB
-				</Text>
+				</Title>
 			</Group>
 
 			<Group

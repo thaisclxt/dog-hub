@@ -32,7 +32,7 @@ const AdoptionCard = (props: {
 				<Image src={srcImage()} alt={`${breed.name} image`} />
 			</Card.Section>
 
-			<Title order={2} align="left" color="#585858" my="sm">
+			<Title order={3} align="left" my="sm">
 				{breed.name}
 			</Title>
 
