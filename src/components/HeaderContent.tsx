@@ -37,7 +37,10 @@ const HeaderContent = (props: { cart: Breed[] }) => {
 				</Text>
 			</Group>
 
-			<Group>
+			<Group
+				onClick={() => navigate("/adoption")}
+				style={{ cursor: "pointer" }}
+			>
 				<Storefront
 					fontSize="large"
 					style={{ color: "white", position: "relative", right: "2.3rem" }}

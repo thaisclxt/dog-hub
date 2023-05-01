@@ -64,14 +64,7 @@ const AdoptionCard = (props: {
 						)}
 					</List>
 
-					<Button
-						color="gray.6"
-						uppercase
-						fullWidth
-						component={Link}
-						to={"../../adoption"}
-						onClick={onAdd}
-					>
+					<Button color="gray.6" uppercase fullWidth onClick={onAdd}>
 						Adotar
 					</Button>
 				</>
