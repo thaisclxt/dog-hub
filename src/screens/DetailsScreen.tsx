@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import axios from "axios";
 import ScreenTitle from "../components/ScreenTitle";
-import AdoptionCard from "../components/AdoptionCard";
+import DogCard from "../components/DogCard";
 
 const DetailsScreen = (props: {
 	setCart: React.Dispatch<any | ((prevState: any) => any)>;
@@ -29,7 +29,7 @@ const DetailsScreen = (props: {
 
 			{breed && (
 				<div style={{ width: 380 }}>
-					<AdoptionCard
+					<DogCard
 						breed={breed}
 						key={breed.id}
 						onAdd={() => setCart((prev: Breed[]) => [...prev, breed])}

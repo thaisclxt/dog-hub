@@ -10,7 +10,7 @@ const parseMeasurements = (
 	return isImperial ? value.imperial : value.metric;
 };
 
-const AdoptionCard = (props: {
+const DogCard = (props: {
 	breed: Breeds | Breed;
 	onAdd?: () => void;
 	requireDetails?: boolean;
@@ -93,4 +93,4 @@ const AdoptionCard = (props: {
 	);
 };
 
-export default AdoptionCard;
+export default DogCard;

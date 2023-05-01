@@ -3,7 +3,7 @@ import { Stack } from "@mantine/core";
 import { useEffect, useState } from "react";
 
 import ScreenTitle from "../components/ScreenTitle";
-import AdoptionCard from "../components/AdoptionCard";
+import DogCard from "../components/DogCard";
 
 import axios from "axios";
 
@@ -24,7 +24,7 @@ const ListingScreen = () => {
 			<ScreenTitle title="Para adoção" />
 			{breeds.map((breed) => (
 				<div key={breed.id} style={{ width: 380 }}>
-					<AdoptionCard breed={breed} />
+					<DogCard breed={breed} />
 				</div>
 			))}
 		</Stack>

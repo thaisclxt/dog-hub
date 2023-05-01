@@ -5,7 +5,7 @@ import { Breed } from "../interfaces";
 const removeAt = <T,>(index: number, array: T[]): T[] =>
 	array.slice(0, index).concat(array.slice(index + 1));
 
-const CompactCard = (props: {
+const CompactDogCard = (props: {
 	breed: Breed;
 	index: number;
 	setCart: React.Dispatch<any | ((prevState: any) => any)>;
@@ -48,4 +48,4 @@ const CompactCard = (props: {
 	);
 };
 
-export default CompactCard;
+export default CompactDogCard;
