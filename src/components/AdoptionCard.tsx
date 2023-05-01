@@ -27,7 +27,7 @@ const AdoptionCard = (props: {
 		: { component: Link, to: `details/${breed.id}` };
 
 	return (
-		<Card shadow="md" padding="lg" radius="md" {...detailsProps}>
+		<Card shadow="xl" padding="lg" radius="md" {...detailsProps}>
 			<Card.Section>
 				<Image src={srcImage()} alt={`${breed.name} image`} />
 			</Card.Section>
@@ -74,6 +74,7 @@ const AdoptionCard = (props: {
 						fullWidth
 						onClick={onAdd}
 						style={{ background: "#6c6c6c" }}
+						sx={(theme) => ({ "box-shadow": theme.shadows.xl })}
 					>
 						Adotar
 					</Button>

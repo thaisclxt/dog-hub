@@ -48,7 +48,7 @@ const HeaderContent = (props: { cart: Breed[] }) => {
 				<Storefront fontSize="large" style={{ color: "white" }} />
 				<Badge
 					color="red.8"
-					size={"0.5rem"}
+					size="0.5rem"
 					variant="filled"
 					style={{ position: "relative", right: "0.8rem", top: "-0.9rem" }}
 				>

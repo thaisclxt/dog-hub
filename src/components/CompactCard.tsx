@@ -18,6 +18,7 @@ const CompactCard = (props: {
 				backgroundColor: theme.colors.gray[0],
 				padding: theme.spacing.xs,
 				borderRadius: theme.radius.md,
+				boxShadow: theme.shadows.md,
 				width: "480px",
 			})}
 		>

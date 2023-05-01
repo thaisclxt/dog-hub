@@ -10,9 +10,17 @@ const App = () => {
 
 	return (
 		<AppShell
-			styles={{ main: { backgroundColor: "#ededed" } }}
+			styles={{ root: { backgroundColor: "#ededed", margin: "0 -1rem" } }}
 			header={
-				<Header height={80} style={{ backgroundColor: "#a5a5a5" }}>
+				<Header
+					height={80}
+					style={{
+						backgroundColor: "#a5a5a5",
+						borderRadius: "0 0 0.5rem 0.5rem",
+						borderBottom: "0",
+					}}
+					sx={(theme) => ({ boxShadow: theme.shadows.lg })}
+				>
 					<HeaderContent cart={cart} />
 				</Header>
 			}

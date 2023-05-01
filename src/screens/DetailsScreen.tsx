@@ -28,7 +28,7 @@ const DetailsScreen = (props: {
 			<ScreenTitle title="Detalhes" />
 
 			{breed && (
-				<div style={{ width: 480, margin: "auto" }}>
+				<div style={{ width: 480 }}>
 					<AdoptionCard
 						breed={breed}
 						key={breed.id}

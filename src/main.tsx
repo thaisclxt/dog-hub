@@ -10,6 +10,13 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 		<MantineProvider
 			theme={{
 				fontFamily: "sans-serif",
+
+				shadows: {
+					md: "1px 1px 3px rgba(0, 0, 0, .35)",
+					lg: "0px 3px 15px rgba(0, 0, 0, .65)",
+					xl: "0px 5px 15px rgba(0, 0, 0, .35)",
+				},
+
 				headings: {
 					sizes: {
 						h1: { fontSize: "1.7rem", fontWeight: "100" },
