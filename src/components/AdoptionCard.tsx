@@ -1,6 +1,6 @@
-import { Breed, Breeds } from "../interfaces";
 import { Badge, Button, Card, Group, Image, List, Title } from "@mantine/core";
 import { Link } from "react-router-dom";
+import { Breed, Breeds } from "../interfaces";
 
 const parseMeasurements = (
 	value: string | number | { imperial: string; metric: string },

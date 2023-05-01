@@ -1,7 +1,7 @@
 import { Badge, Group, Space, Text } from "@mantine/core";
 import { ArrowBack, Storefront } from "@mui/icons-material";
-import { Breed } from "../interfaces";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Breed } from "../interfaces";
 
 const HeaderContent = (props: { cart: Breed[] }) => {
 	const { cart } = props;

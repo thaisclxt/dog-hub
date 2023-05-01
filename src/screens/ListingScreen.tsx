@@ -1,8 +1,8 @@
-import ScreenTitle from "../components/ScreenTitle";
-import AdoptionCard from "../components/AdoptionCard";
-
 import { Breeds } from "../interfaces";
 import { useEffect, useState } from "react";
+
+import ScreenTitle from "../components/ScreenTitle";
+import AdoptionCard from "../components/AdoptionCard";
 
 import axios from "axios";
 

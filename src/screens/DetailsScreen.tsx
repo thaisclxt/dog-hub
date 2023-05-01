@@ -1,10 +1,9 @@
-import ScreenTitle from "../components/ScreenTitle";
-
 import { Breed } from "../interfaces";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import axios from "axios";
+import ScreenTitle from "../components/ScreenTitle";
 import AdoptionCard from "../components/AdoptionCard";
 
 const DetailsScreen = (props: {

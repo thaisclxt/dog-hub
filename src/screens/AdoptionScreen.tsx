@@ -1,6 +1,8 @@
+import { Stack } from "@mantine/core";
+import { Breed } from "../interfaces";
+
 import CompactCard from "../components/CompactCard";
 import ScreenTitle from "../components/ScreenTitle";
-import { Breed } from "../interfaces";
 
 const AdoptionScreen = (props: {
 	cart: Breed[];
@@ -9,13 +11,13 @@ const AdoptionScreen = (props: {
 	const { cart, setCart } = props;
 
 	return (
-		<>
+		<Stack align="center" spacing={34} h={300}>
 			<ScreenTitle title="Sua lista de adoção" />
 
 			{cart.map((dog, index) => (
-				<CompactCard breed={dog} index={index} setCart={setCart} />
+				<CompactCard breed={dog} key={index} index={index} setCart={setCart} />
 			))}
-		</>
+		</Stack>
 	);
 };
 
