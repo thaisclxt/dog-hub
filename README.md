@@ -10,6 +10,10 @@ A React App challenge for search and adopt dogs
 3. To execute the application run: `npm run dev`
 4. Open in [http://localhost:5173/](http://localhost:5173/)
 
+### Using Docker
+
+`` docker run --rm -it -v `pwd`:/app -p 5173:5173 --workdir=/app node npm run dev -- --host ``
+
 ## List of Technologies
 
 - [React](https://react.dev/)
